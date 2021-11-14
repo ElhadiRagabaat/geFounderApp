@@ -281,7 +281,7 @@ function Map() {
       </Route>
  
  <Route exact path="/home-page">
-   <homePage/>
+   <homePage place ={places}/>
  </Route>
  </Switch>
   

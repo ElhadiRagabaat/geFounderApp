@@ -2,11 +2,13 @@ import React from 'react'
 import  useStyles from './details/styles'
 import './details/style.css'
 import { Typography } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 export const Menu = ({menu,place}) => {
     const classes = useStyles()
     return (
         <div >
+            <Link to={`/home-page${place.id}`}>
         <div className={classes.menu} key={place.id}>
                     <img className={classes.imageMenu ,"elem"}
                     src={menu.image}
@@ -16,7 +18,7 @@ export const Menu = ({menu,place}) => {
                        {menu.dishtitle}
                     </Typography>
                 </div>
-              
+                </Link>
                 </div>
     )
 }
