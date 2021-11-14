@@ -18,6 +18,13 @@ import "react-popupbox/dist/react-popupbox.css"
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import Phone from '@material-ui/icons/Phone'
 import RestaurantTwoToneIcon from '@material-ui/icons/RestaurantTwoTone';
+import homePage from '../Component/details/homePage'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import {
   PopupboxManager,
   PopupboxContainer
@@ -156,7 +163,11 @@ function Map() {
 }
   
   return (
-    <div>
+    <Router>
+     
+ 
+     <Switch>
+       <Route exact path="/">
     <CssBaseline/>
     {/* <Header/> */}
     <SearchBar/>
@@ -262,16 +273,22 @@ function Map() {
 )}
 
     </ReactMapGL>
-
         </Grid>
         <Grid item xs={12} md={4}>
           <List  places={places} />
         </Grid>
       </Grid>
-   
+      </Route>
+ 
+ <Route exact path="/home-page">
+   <homePage/>
+ </Route>
+ </Switch>
+  
 
-    
-   </div> 
+   
+   
+   </Router>
   );
  
 }

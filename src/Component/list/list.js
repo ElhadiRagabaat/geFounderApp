@@ -5,11 +5,11 @@ import {Typography, Grid, FormControl } from '@material-ui/core'
 
 const List = ({places}) => {
     const classes = useStyle()
-    console.log(places)
+    
    
    
     return (
-        <div className={classes.container}>
+        <div className={classes.container} key={places.id}>
             <Typography variant='h5' className="typed marginTop">Restaurants around you</Typography>
                 <div>
             <Grid container spacing={3} className={classes.list}>

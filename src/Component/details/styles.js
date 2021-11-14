@@ -15,17 +15,18 @@ export default makeStyles(() => ({
     textDecoration:'none',
     
   },
+ 
   menu:{
    display:'flex',
    justifyContent:"space-between",
    marginTop:"3px",
   
   },
-  imageMenu:{
-    width:'80px',
-    height:'80px',
-    borderRadius:"50%",
-    objectFit:"cover",
-  }
+  // imageMenu:{
+  //   width:'80px',
+  //   height:'80px',
+  //   borderRadius:"50%",
+  //   objectFit:"cover",
+  // }
  
 }));

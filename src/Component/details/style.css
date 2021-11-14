@@ -1,0 +1,16 @@
+
+ .elem {
+    
+    width:80px;
+    height:80px;
+    margin-bottom: 20px;
+    border-radius:50%;
+    object-fit: cover;
+    transition: 500ms linear; 
+    cursor: pointer;
+  }
+
+.elem:hover {
+    transform: scale(1.1);
+    
+  }
