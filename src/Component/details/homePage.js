@@ -20,6 +20,7 @@ const HomePage = ({detail}) => {
    
   }, [location,menuData])
 
+
   const openPopupbox=(p)=> {
  
     const content = (
@@ -39,6 +40,8 @@ const HomePage = ({detail}) => {
                     </Typography>
                   </Paper>
   </div>
+
+
     )
     PopupboxManager.open({
       content,

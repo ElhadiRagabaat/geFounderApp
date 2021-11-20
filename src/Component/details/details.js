@@ -120,9 +120,11 @@ const Details = ({ place, selected, refProp }) => {
                 <Typography variant='h3' color='textSecondary' style={{textAlign:'center'}}>Menu</Typography>
               {place.menu1&& place.menu1.slice(0,3).map(menu=>{
                   return(
+
                   
                  <Menu menu = {menu} place={place} id ={place.id}/>
                 
+
                   )
                 
                 

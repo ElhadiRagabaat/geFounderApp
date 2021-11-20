@@ -17,9 +17,8 @@ export const Menu = ({menu,place,id}) => {
     
     
     return (
-        <div >
-            
-        <div className={classes.menu} key={id}>
+        <div >  
+        <div className={classes.menu} key={place.id}>
                     <img className={classes.imageMenu ,"elem"}
                     src={menu.image}
                     alt="" />
@@ -29,7 +28,8 @@ export const Menu = ({menu,place,id}) => {
                     </Typography>
                    
                 </div>
-                
                 </div>
+                
+
     )
 }
