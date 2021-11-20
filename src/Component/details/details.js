@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, } from 'react'
 import { Typography, Card, CardMedia, CardContent } from '@material-ui/core'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import Phone from '@material-ui/icons/Phone'
 import Rating from '@material-ui/lab/Rating'
 import useStyles from './styles'
+import './style.css'
 import firebase from 'firebase'
 import makeid from '../../Component/help/function'
 import {
@@ -20,7 +21,7 @@ import {
 } from "react-share";
 import { Menu } from '../Menu'
 import { storage,fireDB } from '../firebase'
-import { Link } from 'react-router-dom'
+import { Link ,useHistory} from 'react-router-dom'
 
 
 const Details = ({ place, selected, refProp }) => {
@@ -31,6 +32,7 @@ const Details = ({ place, selected, refProp }) => {
     const [menuArry, setMenuArry] = useState(place.menu1 ?place. menu1 :[])
     const [price,setPrice ] = useState(null)
     const [ingredients, setIngredients] = useState(null)
+    const history = useHistory()
 
 
 
@@ -92,6 +94,15 @@ const Details = ({ place, selected, refProp }) => {
         console.log(place.id)
         setAddMenu(true)
     }
+    
+    
+    const sendData=(e)=>{
+        e.preventDefault();
+     history.push("home-page/", place={place})
+
+     
+    }
+  
     return (
         <Card elevation={6} key={place._id}>
            <button onClick={addMen}>add</button>
@@ -109,14 +120,15 @@ const Details = ({ place, selected, refProp }) => {
                 <Typography variant='h3' color='textSecondary' style={{textAlign:'center'}}>Menu</Typography>
               {place.menu1&& place.menu1.slice(0,3).map(menu=>{
                   return(
-                      <Link to='/home-page'>
-                 <Menu menu = {menu} place={place}/>
-                 </Link>
+                  
+                 <Menu menu = {menu} place={place} id ={place.id}/>
+                
                   )
                 
                 
               }) 
             }
+            <button onClick={sendData} className="button_link">Menu</button>
                 {place.address && (
                     <Typography gutterBottom variant='body2' color='secondary' className={classes.subtitle}>
                         <LocationOnIcon />{`Nave shaana ${place.address}`}

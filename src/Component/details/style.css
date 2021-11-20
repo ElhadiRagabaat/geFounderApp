@@ -14,3 +14,43 @@
     transform: scale(1.1);
     
   }
+  .elem1 {
+    
+    width:80px;
+    height:80px;
+    margin-bottom: 20px;
+    border-radius:50%;
+    object-fit: cover;
+    transition: 500ms linear; 
+    cursor: pointer;
+  }
+.menuimg{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  margin-top:40px;
+  margin-bottom:20px;
+  margin-left:150px;
+  object-fit: cover;
+  transition: 500ms linear; 
+  cursor: pointer;
+}
+.menuimg:hover {
+  margin-bottom:100px;
+  margin-top:10px;
+    transform: scale(2.1);
+    
+  }
+  .elem1:hover {
+    transform: scale(1.1);
+    
+  }
+  .button_link{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid blue;
+    font-size: 16px;
+    margin: 8px;
+    
+  }

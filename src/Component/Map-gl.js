@@ -18,7 +18,7 @@ import "react-popupbox/dist/react-popupbox.css"
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import Phone from '@material-ui/icons/Phone'
 import RestaurantTwoToneIcon from '@material-ui/icons/RestaurantTwoTone';
-import homePage from '../Component/details/homePage'
+import HomePage from '../Component/details/homePage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -118,7 +118,7 @@ function Map() {
     .onSnapshot((snap) => {
         let documents = [];
         snap.forEach(doc => {
-            console.log(doc.data())
+            // console.log(doc.data())
             documents.push({ ...doc.data(), id: doc.id })
         });
         setPlaces(documents)
@@ -281,7 +281,7 @@ function Map() {
       </Route>
  
  <Route exact path="/home-page">
-   <homePage/>
+   <HomePage />
  </Route>
  </Switch>
   
