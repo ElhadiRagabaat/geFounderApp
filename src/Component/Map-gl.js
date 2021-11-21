@@ -180,8 +180,8 @@ function Map() {
       {...viewport}
       mapboxApiAccessToken="pk.eyJ1IjoiZWxoYWQiLCJhIjoiY2tzNml0NzFmMTNucDJ2cGh4bWQ5YndtNiJ9.RWDtw6EM9BQ1Q-KTID_q9A"
       mapStyle="mapbox://styles/elhad/ckshtr4pe24zr17s30kruj00h"
-      onViewportChange={nextViewport => setViewport(nextViewport)
-       }
+      // onViewportChange={nextViewport => setViewport(nextViewport)
+      //  }
       onDblClick={latClick}
       
     >
